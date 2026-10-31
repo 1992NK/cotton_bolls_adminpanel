@@ -1,0 +1,102 @@
+.wrapper {
+  padding: 20px;
+}
+
+.tableScroll {
+  overflow-x: auto;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--radius);
+}
+
+.table {
+  width: 100%;
+  min-width: 960px;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 14px 16px;
+  background: var(--bgColor);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--borderColor);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.alignRight {
+  text-align: right !important;
+}
+
+.select {
+  width: 100%;
+  min-width: 150px;
+  padding: 8px 10px;
+  border: 1px solid var(--lineColor);
+  border-radius: var(--radius);
+  background: var(--white);
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.iconBtn {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.iconBtn:hover {
+  opacity: 1;
+}
+
+.paginationBox {
+  padding: 24px 0 8px;
+}
+
+@media (max-width: 1399px) {
+  .table th,
+  .table td {
+    padding: 14px 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 12px;
+  }
+
+  .paginationBox {
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 8px;
+  }
+}

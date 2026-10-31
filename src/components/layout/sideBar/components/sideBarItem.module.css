@@ -1,0 +1,41 @@
+.item,
+.subItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  text-align: left;
+}
+
+.item:hover,
+.subItem:hover,
+.active {
+  background: var(--hover-bg);
+}
+
+.active {
+  font-weight: 500;
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.label {
+  flex: 1;
+}
+
+.subMenu {
+  margin: 2px 0 2px 12px;
+}
+
+.dash {
+  width: 8px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}

@@ -1,0 +1,59 @@
+.card {
+  padding: 16px;
+}
+
+.title {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--lineColor);
+}
+
+.tab {
+  padding: 8px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.activeTab {
+  border-bottom-color: var(--green);
+  opacity: 1;
+}
+
+.chartBox {
+  position: relative;
+  height: 340px;
+}
+
+@media (max-width: 1399px) {
+  .chartBox {
+    height: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    padding: 12px;
+  }
+
+  .chartBox {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .chartBox {
+    height: 240px;
+  }
+}

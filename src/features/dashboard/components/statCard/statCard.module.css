@@ -1,0 +1,36 @@
+.statCard {
+  padding: 14px;
+}
+
+.iconBox {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  font-size: 14px;
+}
+
+.titleText {
+  opacity: 0.75;
+}
+
+.value {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .statCard {
+    padding: 12px;
+  }
+}

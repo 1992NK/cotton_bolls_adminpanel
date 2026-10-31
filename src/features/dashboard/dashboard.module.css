@@ -1,0 +1,61 @@
+.gradientGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 1399px) {
+  .statGrid {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .gradientGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .statGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chartGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .gradientGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gradientGrid,
+  .statGrid,
+  .chartGrid {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gradientGrid,
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+}

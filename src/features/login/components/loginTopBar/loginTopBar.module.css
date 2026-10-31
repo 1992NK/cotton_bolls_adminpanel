@@ -1,0 +1,33 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  max-width: 512px;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.link {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .topBar {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .text {
+    font-size: 13px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}

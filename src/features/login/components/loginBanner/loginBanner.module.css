@@ -1,0 +1,68 @@
+.banner {
+  position: relative;
+  flex: 1 1 58%;
+  overflow: hidden;
+  background: linear-gradient(160deg, #0a1a45 0%, #050f33 55%, #07185a 100%);
+}
+
+.circleTop {
+  position: absolute;
+  top: -48%;
+  right: -4%;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 70% 85%,
+    rgba(45, 95, 255, 0.55),
+    rgba(15, 40, 140, 0.25) 50%,
+    transparent 72%
+  );
+}
+
+.circleLeftBig {
+  position: absolute;
+  top: 38%;
+  left: -14%;
+  width: 28%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 50%, rgba(25, 60, 190, 0.45), transparent 70%);
+}
+
+.circleLeftSmall {
+  position: absolute;
+  top: 56%;
+  left: -8%;
+  width: 18%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, #2f58ff, #1a3dd0 60%, #0d2290);
+}
+
+.circleBottom {
+  position: absolute;
+  right: -14%;
+  bottom: -38%;
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 0%, #4c8dff, #2146ee 30%, #0b1f80 65%, #061450);
+  box-shadow: 0 0 90px rgba(60, 110, 255, 0.45);
+}
+
+.ringBottom {
+  position: absolute;
+  right: -30%;
+  bottom: -52%;
+  width: 66%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(70, 120, 255, 0.5);
+  border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+  .banner {
+    display: none;
+  }
+}

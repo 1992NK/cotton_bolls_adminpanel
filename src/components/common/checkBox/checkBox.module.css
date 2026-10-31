@@ -1,0 +1,52 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border: 1px solid #dfe6f5;
+  border-radius: var(--radius);
+  transition: background 0.2s ease;
+}
+
+.box svg {
+  opacity: 0;
+}
+
+.input:checked + .box {
+  background: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+
+.input:checked + .box svg {
+  opacity: 1;
+}
+
+.input:focus-visible + .box {
+  box-shadow: 0 0 0 2px var(--primaryColor);
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .label {
+    font-size: 14px;
+  }
+}

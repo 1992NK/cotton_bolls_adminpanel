@@ -1,0 +1,45 @@
+.wrapper {
+  min-height: 100vh;
+}
+
+.main {
+  margin-left: 256px;
+  transition: margin-left 0.3s ease;
+}
+
+.mainFull {
+  margin-left: 0;
+}
+
+.content {
+  padding: 32px 0 48px;
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .main,
+  .mainFull {
+    margin-left: 0;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .content {
+    padding: 24px 0 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content {
+    padding: 20px 0 32px;
+  }
+}
