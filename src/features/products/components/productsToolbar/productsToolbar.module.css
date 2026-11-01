@@ -1,0 +1,35 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.left { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 250px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.searchBox input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) { .searchBox { width: 220px; } }
+@media (max-width: 767px) {
+  .left { width: 100%; }
+  .searchBox { width: 100%; }
+}

@@ -1,0 +1,31 @@
+.control {
+  width: 100%;
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 14px;
+  outline: 0;
+}
+
+.control:focus-within { border-color: #2563eb; }
+
+.group { display: flex; align-items: stretch; overflow: hidden; }
+.prefix { display: flex; align-items: center; padding: 0 12px; background: #f3f4f6; }
+.input { flex: 1; min-width: 0; height: 42px; padding: 0 12px; border: 0; outline: 0; background: transparent; font-size: 14px; }
+.textarea { padding: 12px; resize: vertical; font-family: inherit; }
+.select { height: 42px; padding: 0 12px; }
+
+.tags { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 4px 8px; }
+.tags .input { height: 34px; padding: 0 4px; }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #eff6ff;
+  font-size: 13px;
+}
+
+.tag button { display: inline-flex; padding: 0; border: 0; background: transparent; cursor: pointer; }

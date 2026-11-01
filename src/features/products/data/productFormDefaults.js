@@ -1,0 +1,17 @@
+export const emptyProductForm = {
+  name: "",
+  description: "",
+  images: [],
+  sku: "",
+  barcode: "",
+  category: "",
+  defaultCategory: "",
+  price: 0,
+  salePrice: 0,
+  stock: 0,
+  slug: "",
+  tags: [],
+  metaTitle: "",
+  metaDescription: "",
+  metaImages: [],
+};

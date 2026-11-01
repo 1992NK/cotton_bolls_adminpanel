@@ -1,0 +1,15 @@
+.row {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.label { padding-top: 10px; font-size: 15px; }
+.field { min-width: 0; }
+
+@media (max-width: 992px) { .row { grid-template-columns: 34% 1fr; } }
+@media (max-width: 767px) {
+  .row { grid-template-columns: 1fr; gap: 6px; }
+  .label { padding-top: 0; }
+}
