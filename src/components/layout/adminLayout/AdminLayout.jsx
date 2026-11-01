@@ -16,7 +16,7 @@ export default function AdminLayout({ children }) {
       <SideBar toggled={toggled} onClose={handleClose} />
       {toggled && <div className={styles.overlay} onClick={handleClose} />}
 
-      <div className={`${styles.main} ${toggled ? styles.mainFull : ""}`}>
+      <div className={`${styles.main} ${toggled ? styles.mainCollapsed : ""}`}>
         <NavBar onToggle={handleToggle} />
         <main className={styles.content}>{children}</main>
       </div>

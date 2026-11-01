@@ -72,3 +72,29 @@ select {
     padding: 0 16px;
   }
 }
+
+.textWhite {
+  color: var(--white);
+}
+
+.textDanger {
+  color: var(--red);
+}
+
+.textBlue {
+  color: #2563eb;
+}
+
+.printOnly {
+  display: none;
+}
+
+@media print {
+  body.printingReceipt > *:not(.printOnly) {
+    display: none !important;
+  }
+
+  body.printingReceipt .printOnly {
+    display: block;
+  }
+}

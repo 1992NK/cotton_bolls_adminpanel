@@ -1,0 +1,41 @@
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.label {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.value {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  opacity: 0.75;
+}
+
+.invoiceTo {
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .invoiceTo {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .info {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

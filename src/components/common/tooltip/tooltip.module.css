@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.tip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  z-index: 20;
+  padding: 5px 10px;
+  border-radius: var(--radius);
+  background: #f59e0b;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  border: 5px solid transparent;
+  border-top-color: #f59e0b;
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right {
+  right: -8px;
+}
+
+.right::after {
+  right: 14px;
+}
+
+.wrapper:hover .tip,
+.wrapper:focus-within .tip {
+  visibility: visible;
+  opacity: 1;
+}

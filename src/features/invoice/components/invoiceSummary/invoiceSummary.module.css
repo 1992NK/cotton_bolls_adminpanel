@@ -1,0 +1,56 @@
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding: 24px 32px;
+  border: 1px solid var(--lineColor);
+  border-radius: var(--radius);
+  background: #f3f4f6;
+}
+
+.label {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.value {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.total {
+  text-align: right;
+}
+
+.totalValue {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 1399px) {
+  .summary {
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .total {
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .summary {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 16px;
+  }
+}

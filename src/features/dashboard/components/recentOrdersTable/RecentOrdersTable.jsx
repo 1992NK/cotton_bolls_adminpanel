@@ -1,10 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Printer, ZoomIn } from "lucide-react";
 import Card from "@/components/common/card/Card";
 import Badge from "@/components/common/badge/Badge";
 import Pagination from "@/components/common/pagination/Pagination";
+import Tooltip from "@/components/common/tooltip/Tooltip";
+import PrintReceipt from "@/components/common/printReceipt/PrintReceipt";
 import statusColors from "@/constants/statusColors";
 import {
   recentOrders,
@@ -12,15 +15,20 @@ import {
   statusOptions,
   totalOrderPages,
 } from "@/features/dashboard/data/recentOrdersData";
+import { getInvoice } from "@/features/invoice/data/invoiceData";
 import styles from "./recentOrdersTable.module.css";
 
 export default function RecentOrdersTable() {
   const [orders, setOrders] = useState(recentOrders);
   const [currentPage, setCurrentPage] = useState(1);
+  const [printInvoice, setPrintInvoice] = useState(null);
 
   const handleStatusChange = (id, status) => {
     setOrders((prev) => prev.map((order) => (order.id === id ? { ...order, status } : order)));
   };
+
+  const handlePrint = (invoiceNo) => setPrintInvoice(getInvoice(invoiceNo));
+  const handleAfterPrint = () => setPrintInvoice(null);
 
   return (
     <Card className={styles.wrapper}>
@@ -65,12 +73,25 @@ export default function RecentOrdersTable() {
                 </td>
                 <td className={styles.alignRight}>
                   <div className={styles.actions}>
-                    <button className={styles.iconBtn} aria-label="Print invoice">
-                      <Printer size={18} />
-                    </button>
-                    <button className={styles.iconBtn} aria-label="View invoice">
-                      <ZoomIn size={18} />
-                    </button>
+                    <Tooltip label="Print Receipt" align="right">
+                      <button
+                        className={styles.iconBtn}
+                        onClick={() => handlePrint(order.invoiceNo)}
+                        aria-label="Print receipt"
+                      >
+                        <Printer size={18} />
+                      </button>
+                    </Tooltip>
+
+                    <Tooltip label="View Invoice" align="right">
+                      <Link
+                        href={`/order/${order.invoiceNo}`}
+                        className={styles.iconBtn}
+                        aria-label="View invoice"
+                      >
+                        <ZoomIn size={18} />
+                      </Link>
+                    </Tooltip>
                   </div>
                 </td>
               </tr>
@@ -86,6 +107,8 @@ export default function RecentOrdersTable() {
           onPageChange={setCurrentPage}
         />
       </div>
+
+      {printInvoice && <PrintReceipt invoice={printInvoice} onAfterPrint={handleAfterPrint} />}
     </Card>
   );
 }

@@ -1,0 +1,32 @@
+.invoiceCard {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+}
+
+@media (max-width: 1399px) {
+  .invoiceCard {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .invoiceCard {
+    gap: 24px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .invoiceCard {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .invoiceCard {
+    gap: 20px;
+    padding: 12px;
+  }
+}

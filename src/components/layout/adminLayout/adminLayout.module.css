@@ -1,14 +1,16 @@
 .wrapper {
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 .main {
+  min-width: 0;
   margin-left: 256px;
   transition: margin-left 0.3s ease;
 }
 
-.mainFull {
-  margin-left: 0;
+.mainCollapsed {
+  margin-left: 72px;
 }
 
 .content {
@@ -21,7 +23,9 @@
 
 @media (max-width: 992px) {
   .main,
-  .mainFull {
+  .mainCollapsed {
+    width: 100%;
+    max-width: 100vw;
     margin-left: 0;
   }
 
