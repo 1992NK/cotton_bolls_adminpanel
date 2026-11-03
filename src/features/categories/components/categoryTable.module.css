@@ -1,0 +1,89 @@
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--white);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--radius);
+}
+
+.table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 14px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: left;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.table td {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.checkCol {
+  width: 48px;
+  text-align: center;
+}
+
+.checkCol input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.centerCol {
+  text-align: center;
+}
+
+.rightCol {
+  text-align: right;
+}
+
+.empty {
+  text-align: center;
+  padding: 30px 12px;
+}
+
+@media (max-width: 1399px) {
+  .table th,
+  .table td {
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 992px) {
+  .table {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 767px) {
+  .table th,
+  .table td {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .table {
+    min-width: 700px;
+  }
+}

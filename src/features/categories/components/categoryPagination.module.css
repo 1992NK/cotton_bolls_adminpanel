@@ -1,0 +1,86 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 4px 0;
+  font-size: 14px;
+}
+
+.selectedText {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.rows select {
+  height: 36px;
+  padding: 0 10px;
+  background: var(--white);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--radius);
+}
+
+.pageText {
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--white);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1199px) {
+  .controls {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pagination {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .controls {
+    gap: 12px;
+  }
+
+  .rows,
+  .pageText {
+    font-size: 13px;
+  }
+}
